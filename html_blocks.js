@@ -64,6 +64,25 @@ var htmlBlocks =
   "tooltip": "this allows you to style webpages",
   "helpUrl": "https://www.w3schools.com/html/html_classes.asp"
 },
+  {
+  "type": "import font",
+  "message0": "Import font from url %1%2",
+  "args0": [
+      {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_input",
+      "name": "text",
+      "text": "default"
+    },
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Allows you to import custom fonts",
+  "helpUrl": "https://www.w3schools.com/css"
+},
  {
   "type": "classer",
   "message0": "Set Class To  %1%2 %3 Content %4",
