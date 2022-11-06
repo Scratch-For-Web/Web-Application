@@ -80,6 +80,22 @@ var htmlBlocks =
   "tooltip": "Allows you to import custom fonts",
   "helpUrl": "https://www.w3schools.com/css"
 },
+  {
+  "type": "addfont",
+  "message0": "set font family to %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "text",
+      "text": "default"
+    },
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Allows you to import custom fonts",
+  "helpUrl": "https://www.w3schools.com/css"
+},
  {
   "type": "classer",
   "message0": "Set Class To  %1%2 %3 Content %4",
