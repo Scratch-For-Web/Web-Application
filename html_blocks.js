@@ -98,19 +98,15 @@ var htmlBlocks =
 },
  {
   "type": "classer",
-  "message0": "Set Class To  %1%2 %3 Content %4",
+  "message0": "Set Class To  %1 with content%2",
   "args0": [
-      {
-      "type": "input_dummy"
-    },
+     
     {
       "type": "field_input",
       "name": "text",
       "text": "default"
     },
-    {
-      "type": "input_dummy"
-    },
+
     {
       "type": "input_statement",
       "name": "head",
