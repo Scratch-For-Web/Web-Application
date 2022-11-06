@@ -28,7 +28,7 @@ HtmlGenerator['divclass'] = function(block) {
 HtmlGenerator['importfont'] = function(block) {
   var text_text = block.getFieldValue('text');
   // TODO: Assemble JavaScript into code variable.
-  var code = `<link rel="stylesheet" href="${text_text}">`;
+  var code = `<link rel="stylesheet" \n href="${text_text}">`;
   return code;
 };
 
