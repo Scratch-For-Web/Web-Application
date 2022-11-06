@@ -25,6 +25,12 @@ HtmlGenerator['divclass'] = function(block) {
   var code = `class="${text_text}"`;
   return code;
 };
+HtmlGenerator['import font'] = function(block) {
+  var text_text = block.getFieldValue('text');
+  // TODO: Assemble JavaScript into code variable.
+  var code = `<link rel="stylesheet" href="${text_text}">`;
+  return code;
+};
 
 HtmlGenerator['baseframe'] = function(block) {
   var statements_head = HtmlGenerator.statementToCode(block, 'head');
