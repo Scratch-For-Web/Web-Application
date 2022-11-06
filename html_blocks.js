@@ -66,7 +66,7 @@ var htmlBlocks =
 },
   {
   "type": "importfont",
-  "message0": "Import font from url %1",
+  "message0": "Import font %1",
   "args0": [
     {
       "type": "field_input",
