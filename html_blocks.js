@@ -65,7 +65,7 @@ var htmlBlocks =
   "helpUrl": "https://www.w3schools.com/html/html_classes.asp"
 },
   {
-  "type": "import font",
+  "type": "importfont",
   "message0": "Import font from url %1%2",
   "args0": [
       {
