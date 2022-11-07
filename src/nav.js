@@ -1,6 +1,6 @@
 document.getElementById('nav').innerHTML +=
 `
-<nav style="background-color: #303030;" class="navbar navbar-expand-sm  text-white navbar-light">
+<nav style="background-color:#212121;" class="navbar navbar-expand-sm  text-white navbar-light">
 <div class="container-fluid">
   <ul style="color:white" class="navbar-nav">
     <li>
@@ -14,27 +14,51 @@ document.getElementById('nav').innerHTML +=
         Files
       </button>
       <ul class="bg-dark dropdown-menu">
-        <li class="nav-item">
-          <div><span id="saveButton"> Save blocks</span></div>
+       <li style=" " class="nav-item">
+        <span id="saveButton"> 
+          Save Blocks</strong> </span>
+ 
           </li>
           <li class="nav-item">
-          <label style="cursor:pointer" for="fileButton" class="custom-file-upload">
-          Upload Blocks
+          
+          <label style="cursor:pointer;" for="fileButton" class="custom-file-upload">
+         Upload Blocks </strong>
       </label>
       <input style="display: none;" id="fileButton" type="file"/>
           </li>
           <li class="nav-item">
-            <div><span id="exportButton"> Download </span></div>
+            <div><span id="exportButton"> Download</strong> </span></div>
           </li>
-          <li>
-           
+          <li class="nav-item">
+            <div><span id="screenshot" onclick="screenshot()">  Screenshot</strong>  </span></div>
           </li>
+  
       </ul>
     </div>
-    <button style=" background: none; border:none; margin-top:-5px" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16"> <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/> </svg> View Code
+    <div class="dropdown">
+    <button type="button" style="background: none;border:none; margin-top:-5px; " class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+      Links
     </button>
+    <ul class="bg-dark dropdown-menu">
  
+      <li>
+       <a style="text-decoration:none; color:white" href="https://discord.gg/57HNMGDvXa"><img  width="27px" src="./assets/discord-icon.svg">Support</a>
+      </li>
+      <li>
+      <a style="text-decoration:none; color:white; ; top:20px" href="https://docs.scratch4web.ml/"><img  width="27px" src="./assets/docs-icon.svg">Docs</a>
+     </li>
+     <li>
+      <a style="text-decoration:none; color:white;  ; top:20px" href="https://github.com/Scratch-For-Web/Web-Application"><img  width="27px" src="./assets/github-icon.svg">Source Code</a>
+     </li>
+
+    </ul>
+  </div>
+    <button style=" background: none; border:none; margin-top:-5px" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+       View Code
+    </button>
+    <li style="margin-top:1px;left:2px;bottom:0; positon:relative;" >
+   <span id="run" style="margin-top:-200px;bottom:0; positon:relative;" onclick="displaySite()" >Run Site</span>
+    </li>
   </ul>
 </div>
 </nav>

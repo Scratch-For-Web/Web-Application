@@ -33,8 +33,11 @@ document.getElementById('header').innerHTML += `
         color:black
       }
       html, body {
+        background-color: #303030;
+        color:white;
         padding: 0;
         margin: 0;
+        overflow:hidden;
       }
       .blocklyTreeLabel {
   color: black;
@@ -83,6 +86,7 @@ document.getElementById('header').innerHTML += `
 
       #container {
         width:100vw;
+        overflow:hidden;
         height:100vh;
         display: -ms-grid;
         display: grid;
@@ -100,12 +104,9 @@ document.getElementById('header').innerHTML += `
 
       #blocklyArea  {grid-area: blockly; -ms-grid-row:1;-ms-grid-column:1; -ms-grid-row-span:4;}
       #menubar      {  grid-area: menubar; font-family: sans-serif; font-size: 18px; padding: 5px 10px; display: -ms-grid; display: grid; grid-template-columns: auto 36% auto; -ms-grid-row:1;-ms-grid-column:2; -ms-grid-columns: 32% 36% 32%; }
-      #title        {grid-area: title; width: 100%; background-color: #444; color:white; text-align:center; font-size: 20px; font-family: sans-serif; padding-top: 5px; -ms-grid-row:2;-ms-grid-column:2;}
-      #websiteFrame {grid-area: website; border: 5px solid #444;  -ms-grid-row:3;-ms-grid-column:2;
+      
         font-family: 'Montserrat', sans-serif;}
-      #sourcecode   {grid-area: code; border: 5px solid lightgray;overflow: scroll; margin:0px;  -ms-grid-row:4;-ms-grid-column:2;}
-
-      #website {width: calc(100% - 5px);height: calc(100% - 5px);}
+       
 
 
       /* Edge hack, God I hate this browser */
@@ -126,6 +127,12 @@ document.getElementById('header').innerHTML += `
       #exportButton{
         cursor: pointer;
       }
+      #screenshot{
+        cursor:pointer;
+      }
+      #run{
+        cursor:pointer
+      }
       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;1,200&family=Roboto+Condensed:wght@700&family=Signika+Negative:wght@400;700&family=Varela+Round&display=swap');
     </style>
     <script src="./blockly/blockly_compressed.js"></script>
@@ -138,6 +145,10 @@ document.getElementById('header').innerHTML += `
     <!-- For JS-Blocks only -->
     <script src="./blockly/blocks_compressed.js"></script>
     <script src="./blockly/javascript_compressed.js"></script>
+    <script>
+  
+ 
+    </script>
 
 
 `

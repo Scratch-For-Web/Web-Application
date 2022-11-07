@@ -1,9 +1,28 @@
 <html>
   <head id="header">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-    <script src="./blockly/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/@blockly/plugin-workspace-search "></script>
+    <script src="https://unpkg.com/blockly@9.0.1/javascript_compressed.js"></script>
+    <script src="./blockly/blocks_compressed.js.map"></script>
     <script src="./blockly/msg/js/en.js"></script>
+    <script src="https://unpkg.com/@blockly/workspace-backpack@3.0.2/dist/index.js"></script>
+    <script src="https://unpkg.com/@blockly/theme-dark@4.0.1/dist/index.js"></script>
+    <meta name="title" content="Scratch For Web v1.3">
+<meta name="description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratch4web.ml">
+<meta property="og:title" content="Scratch For Web v1.3">
+<meta property="og:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
+<meta property="og:image" content="https://i.imgur.com/k9PYU79.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://scratch4web.ml">
+<meta property="twitter:title" content="Scratch For Web v1.3">
+<meta property="twitter:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
+<meta property="twitter:image" content="https://i.imgur.com/k9PYU79.png">
     <script src="en.js"></script>
     <script src="./src/html_generators.js"></script>
     <script src="./src/html_blocks.js"></script>
@@ -25,10 +44,10 @@
    <script src="./src/nav.js"></script>
    <script src="./src/body.js"></script>
     <div class="" id="container">
-      <div id="blocklyArea"></div>
+      <div style="width:200%" id="blocklyArea"></div>
       <div id="menubar"></div>
     <div style="background:none; color:black" id="title">untitled web page</div>
-<div style="border:none" id="websiteFrame"><iframe  style="background: white;
+<div style="border:none; display: none;" id="websiteFrame"><iframe  style="background: white;
   
   
   border-radius: 10px;
@@ -648,7 +667,7 @@
     <script>
       var toolbox = document.getElementById("toolbox");
       var blocklyArea = document.getElementById('blocklyArea');
-
+ 
       var options = {
         toolbox : toolbox,
         collapse : true,
@@ -664,6 +683,7 @@
         css : true,
         media : 'https://blockly-demo.appspot.com/static/media/',
         rtl : false,
+        theme:'dark',
         scrollbars : true,
         sounds : true,
         oneBasedIndex : true,
@@ -714,6 +734,9 @@
           Blockly.Xml.domToWorkspace(workspaceBlocks, workspace);
         }
       }
+      const workspaceSearch = new WorkspaceSearch(workspace);
+
+workspaceSearch.init();
 
       Blockly.svgResize(workspace);
 
@@ -734,7 +757,7 @@
         var xml_text = Blockly.Xml.domToText(xml);
        
       let link = document.createElement('a');
-      link.download = 'blocks.xml';
+      link.download = 'blocks.s4w';
       let blob = new Blob([xml_text], {type: 'text/xml'});
       link.href = URL.createObjectURL(blob);
       link.click();
@@ -772,7 +795,30 @@
         reader.readAsText(file);
       }
       document.getElementById('fileButton').addEventListener('change', loadWorkspaceFromUpload, false);
-
+    function screenshot(){
+      workspaceToSvg_(workspace, function(datauri) {
+    const a = document.createElement('a');
+    a.download = 'screenshot.png';
+    a.target = '_self';
+    a.href = datauri;
+    document.body.appendChild(a);
+    a.click();
+    a.parentNode.removeChild(a);
+  });
+   
+    }
+    function displaySite(){
+ 
+    
+      const blob = new Blob([HtmlGenerator.workspaceToCode(workspace)], {
+          type: "text/html"
+      })
+      let newWindow = window.open('/s4w')
+      const url = window.URL.createObjectURL(blob);
+      newWindow.location = url;
+  }
+    const backpack = new Backpack(workspace);
+backpack.init();
      </script>
   </body>
 </html>
