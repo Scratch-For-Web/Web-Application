@@ -64,12 +64,12 @@ Msg = {
       "helpUrl": ""
     },
     "genericstyle": {
-      "message0": "[Custom CSS] Class%1  CSS  %2",
+      "message0": "[Custom CSS] Class%1",
       "tooltip": "",
       "helpUrl": "",
       "args0": [
         {"text": "property"},
-        {"text": "value"}
+      
       ],
     },
     "generictag": {

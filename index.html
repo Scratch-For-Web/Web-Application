@@ -1,71 +1,53 @@
 <html>
   <head id="header">
+    <!--Blockly Imports-->
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="https://unpkg.com/@blockly/plugin-workspace-search "></script>
     <script src="./blockly/blocks_compressed.js.map"></script>
     <script src="./blockly/msg/js/en.js"></script>
     <script src="https://unpkg.com/@blockly/workspace-backpack@3.0.2/dist/index.js"></script>
     <script src="https://unpkg.com/@blockly/theme-dark@4.0.1/dist/index.js"></script>
+     <!------------------------->
+     <!--Meta Tags-->
     <meta name="title" content="Scratch For Web v1.3">
-<meta name="description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://scratch4web.ml">
-<meta property="og:title" content="Scratch For Web v1.3">
-<meta property="og:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
-<meta property="og:image" content="https://i.imgur.com/k9PYU79.png">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://scratch4web.ml">
-<meta property="twitter:title" content="Scratch For Web v1.3">
-<meta property="twitter:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
-<meta property="twitter:image" content="https://i.imgur.com/k9PYU79.png">
+    <meta name="description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scratch4web.ml">
+    <meta property="og:title" content="Scratch For Web v1.3">
+    <meta property="og:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
+    <meta property="og:image" content="https://i.imgur.com/k9PYU79.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://scratch4web.ml">
+    <meta property="twitter:title" content="Scratch For Web v1.3">
+    <meta property="twitter:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
+    <meta property="twitter:image" content="https://i.imgur.com/k9PYU79.png">
     <script src="en.js"></script>
     <script src="./src/html_generators.js"></script>
     <script src="./src/html_blocks.js"></script>
     <script src="./FrameWorks/Reactjs/blocks.js"></script>
     <script src="./FrameWorks/Reactjs/es6.generator.js"></script>
-
-    <!-- For JS-Blocks only -->
-    <script src="./blockly/blocks_compressed.js"></script>
-    <script src="./blockly/javascript_compressed.js"></script>
-     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-
- 
   </head>
-  <script src="./src/header.js"></script>
-  <script src="./src/test.js"></script>
-  <body id="body">
-    <div id="nav">
-
-    </div>
-   <script src="./src/nav.js"></script>
-   <script src="./src/body.js"></script>
+     <!--External Html-->
+    <script src="./src/header.js"></script>
+    <body id="body">
+    <div id="nav"></div>
+    <script src="./src/nav.js"></script>
+    <script src="./src/body.js"></script>
+    <!-------->
     <div class="" id="container">
+      <!--Blockly Workspace-->
       <div style="width:100%; overflow: hidden;" id="blocklyArea"></div>
-      <div id="menubar"></div>
-    <div style="background:none; color:black" id="title">untitled web page</div>
-<div style="border:none; display: none;overflow: hidden;" id="websiteFrame"><iframe  style="background: white;
-  
-  
-  border-radius: 10px;
-  border: 1px solid white;" id="website"></iframe></div>
-
-
-</div>
-
-      
-    
- 
- 
+    </div>
+     <!------------>
+    <!--BlocklY Toolbox-->
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
       <category name="Html Blocks" expanded="true">
         <category name="Base Blocks" colour="#a55b5b">
-          <label  text="Base Blocks To Get Started"></label> 
+          <label text="Base Blocks To Get Started"></label>
           <block type="html">
             <statement name="content">
               <block type="head">
@@ -89,7 +71,6 @@
           <block type="division"></block>
           <block type="body_attributes"></block>
           <block type="head"></block>
-          
           <block type="title">
             <statement name="content">
               <block type="plaintext">
@@ -97,13 +78,13 @@
               </block>
             </statement>
           </block>
-          <block type="span"/>
+          <block type="span" />
           <block type="generictag">
             <field name="NAME">Custom Tag</field>
           </block>
         </category>
         <category name="Text Formatting" colour="#5ba55b">
-         <label  text="Format Text"></label> 
+          <label text="Format Text"></label>
           <block type="plaintext">
             <field name="content"></field>
           </block>
@@ -113,7 +94,6 @@
           <block type="headline">
             <field name="NAME">h1</field>
           </block>
-          
           <block type="generictag">
             <field name="NAME">tag</field>
           </block>
@@ -121,8 +101,8 @@
         <category name="Meta Tags" colour="#59B9F2">
           <block type="meta_org"></block>
         </category>
-         <category name="Text Styling" colour="#5ba55b">
-          <label  text="Style Text"></label> 
+        <category name="Text Styling" colour="#5ba55b">
+          <label text="Style Text"></label>
           <block type="emphasise"></block>
           <block type="inserted"></block>
           <block type="strong"></block>
@@ -138,7 +118,7 @@
           <block type="division"></block>
         </category>
         <category name="Link Attributes" colour="#5ba55b">
-          <label  text="Link Attributes"></label> 
+          <label text="Link Attributes"></label>
           <block type="link">
             <field name="NAME">target</field>
           </block>
@@ -148,11 +128,11 @@
           </block>
         </category>
         <category name="CSS Styling" colour="#5b6da5">
-          <label  text="Styling"></label> 
-           <label  text="Add custom fonts"></label> 
+          <label text="Styling"></label>
+          <label text="Add custom fonts"></label>
           <block type="importfont"></block>
-           <block type="addfont"></block>
-          <label  text="Use the class block to style content -"></label> 
+          <block type="addfont"></block>
+          <label text="Use the class block to style content -"></label>
           <label text=" this goes inside of Style content! Set class to div class"></label>
           <block type="classer"></block>
           <block type="style"></block>
@@ -171,19 +151,17 @@
             <field name="NAME">#ff0000</field>
           </block>
           <block type="genericstyle">
-            <field name="property">property</field>
-            <field name="value">value</field>
+            <field name="property">line1&amp;#10;line2</field>
           </block>
- 
         </category>
         <category name=" Lists" colour="#a55ba5">
-          <label  text="Lists"></label> 
+          <label text="Lists"></label>
           <block type="unorderedlist"></block>
           <block type="orderedlist"></block>
           <block type="listelement"></block>
         </category>
         <category name="Tables" colour="#5ba5a5">
-          <label  text="Tables"></label> 
+          <label text="Tables"></label>
           <block type="table">
             <statement name="content">
               <block type="tablerow">
@@ -229,12 +207,11 @@
         <block type="js"></block>
       </category>
       <category name="Frameworks">
-         <category name="React Js" colour="	#EE4B2B">
+        <category name="React Js" colour="	#EE4B2B">
           <block type="react_js"></block>
-         </category>
+        </category>
       </category>
     </xml>
-
     <script>
       if (typeof(Msg) == "object" && Msg.categories) {
         for (category in Msg.categories) {
@@ -246,7 +223,6 @@
         }
       }
     </script>
-
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
       <block type="html" id="9oFDR`IIn6rS=HtBc1=;" x="-137" y="13">
         <statement name="content">
@@ -316,65 +292,58 @@
         </statement>
       </block>
     </xml>
-
+    <!--Internal javascript And Blockly Config-->
     <script>
       var toolbox = document.getElementById("toolbox");
       var blocklyArea = document.getElementById('blocklyArea');
- 
       var options = {
-        toolbox : toolbox,
-        collapse : true,
-//        comments : false,
-//        disable : false,
-        maxBlocks : Infinity,
-        trashcan : true,
-        renderer:"zelos",
-      
-//        horizontalLayout : false,
-          //        toolboxPosition : 'start',
+        toolbox: toolbox,
+        collapse: true,
+        //        comments : false,
+        //        disable : false,
+        maxBlocks: Infinity,
+        trashcan: true,
+        renderer: "zelos",
+        //        horizontalLayout : false,
+        //        toolboxPosition : 'start',
         tooltips: true,
-        css : true,
-        media : 'https://blockly-demo.appspot.com/static/media/',
-        rtl : false,
-        theme:'dark',
-        scrollbars : true,
-        sounds : true,
-        oneBasedIndex : true,
-        zoom:
-         {controls: true,
+        css: true,
+        media: 'https://blockly-demo.appspot.com/static/media/',
+        rtl: false,
+        theme: 'dark',
+        scrollbars: true,
+        sounds: true,
+        oneBasedIndex: true,
+        zoom: {
+          controls: true,
           wheel: true,
           startScale: .5,
           maxScale: 3,
           minScale: 0.3,
           scaleSpeed: 1.2,
-          pinch: true},
-          grid:
-         {spacing: 20,
+          pinch: true
+        },
+        grid: {
+          spacing: 20,
           length: 3,
           colour: '#ccc',
-          snap: true},
-          move:{
-        scrollbars: {
-          horizontal: true,
-          vertical: true
+          snap: true
         },
-        drag: true,
-        wheel: false}
-        
-  
-
-  }
- 
-     
- 
+        move: {
+          scrollbars: {
+            horizontal: true,
+            vertical: true
+          },
+          drag: true,
+          wheel: false
+        }
+      }
       var workspace = Blockly.inject(blocklyArea, options);
-
       var xml_text = localStorage.getItem('blockly-html-code');
       if (xml_text) {
         var xml = Blockly.Xml.textToDom(xml_text);
         Blockly.Xml.domToWorkspace(xml, workspace);
-      }
-      else {
+      } else {
         /* === For backwards compability. Remove soon ===*/
         var xml_text = localStorage.getItem('code');
         if (xml_text) {
@@ -388,16 +357,12 @@
         }
       }
       const workspaceSearch = new WorkspaceSearch(workspace);
-
-workspaceSearch.init();
-
+      workspaceSearch.init();
       Blockly.svgResize(workspace);
 
       function myUpdateFunction(event) {
         var code = HtmlGenerator.workspaceToCode(workspace);
         document.getElementById('sourcecode').innerText = code;
-        document.getElementById('website').src = "data:text/html;charset=utf-8," + encodeURIComponent(code);
-
         // Save Blocks
         var xml = Blockly.Xml.workspaceToDom(workspace);
         var xml_text = Blockly.Xml.domToText(xml);
@@ -408,29 +373,29 @@ workspaceSearch.init();
       function saveWorkspaceToDownload() {
         var xml = Blockly.Xml.workspaceToDom(workspace);
         var xml_text = Blockly.Xml.domToText(xml);
-       
-      let link = document.createElement('a');
-      link.download = 'blocks.s4w';
-      let blob = new Blob([xml_text], {type: 'text/xml'});
-      link.href = URL.createObjectURL(blob);
-      link.click();
-      URL.revokeObjectURL(link.href);   
+        let link = document.createElement('a');
+        link.download = 'blocks.s4w';
+        let blob = new Blob([xml_text], {
+          type: 'text/xml'
+        });
+        link.href = URL.createObjectURL(blob);
+        link.click();
+        URL.revokeObjectURL(link.href);
       }
       document.getElementById("saveButton").onclick = saveWorkspaceToDownload;
 
       function saveHtmlToDownload() {
         var code = HtmlGenerator.workspaceToCode(workspace);
-        
-       
-      let link = document.createElement('a');
-      link.download = 'website.html';
-      let blob = new Blob([code], {type: 'text/html'});
-      link.href = URL.createObjectURL(blob);
-      link.click();
-      URL.revokeObjectURL(link.href); 
+        let link = document.createElement('a');
+        link.download = 'website.html';
+        let blob = new Blob([code], {
+          type: 'text/html'
+        });
+        link.href = URL.createObjectURL(blob);
+        link.click();
+        URL.revokeObjectURL(link.href);
       }
       document.getElementById("exportButton").onclick = saveHtmlToDownload;
-
 
       function loadWorkspaceFromUpload(e) {
         var file = e.target.files[0];
@@ -448,30 +413,29 @@ workspaceSearch.init();
         reader.readAsText(file);
       }
       document.getElementById('fileButton').addEventListener('change', loadWorkspaceFromUpload, false);
-    function screenshot(){
-      workspaceToSvg_(workspace, function(datauri) {
-    const a = document.createElement('a');
-    a.download = 'screenshot.png';
-    a.target = '_self';
-    a.href = datauri;
-    document.body.appendChild(a);
-    a.click();
-    a.parentNode.removeChild(a);
-  });
-   
-    }
-    function displaySite(){
- 
-    
-      const blob = new Blob([HtmlGenerator.workspaceToCode(workspace)], {
+
+      function screenshot() {
+        workspaceToSvg_(workspace, function(datauri) {
+          const a = document.createElement('a');
+          a.download = 'screenshot.png';
+          a.target = '_self';
+          a.href = datauri;
+          document.body.appendChild(a);
+          a.click();
+          a.parentNode.removeChild(a);
+        });
+      }
+
+      function displaySite() {
+        const blob = new Blob([HtmlGenerator.workspaceToCode(workspace)], {
           type: "text/html"
-      })
-      let newWindow = window.open('/s4w')
-      const url = window.URL.createObjectURL(blob);
-      newWindow.location = url;
-  }
-    const backpack = new Backpack(workspace);
-backpack.init();
-     </script>
+        })
+        let newWindow = window.open('/s4w')
+        const url = window.URL.createObjectURL(blob);
+        newWindow.location = url;
+      }
+      const backpack = new Backpack(workspace);
+      backpack.init();
+    </script>
   </body>
 </html>

@@ -199,8 +199,9 @@ HtmlGenerator['bgcolour'] = function(block) {
 
 HtmlGenerator['genericstyle'] = function(block) {
   var text_property = block.getFieldValue('property');
-  var text_value = block.getFieldValue('value');
-  var code = text_property + ': ' + text_value + ';';
+  var code = `
+  ${text_property}
+  `;
   return code;
 };
 

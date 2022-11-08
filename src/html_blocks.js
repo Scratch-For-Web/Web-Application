@@ -47,17 +47,13 @@ var htmlBlocks =
 },
 {
   "type": "class",
-  "message0": "Custom CSS%1 %2",
+  "message0": "Custom CSS%1 ",
   "args0": [
     {
       "type": "field_label_serializable",
       "name": "NAME",
       "text": "class name"
     },
-    {
-      "type": "input_value",
-      "name": "class"
-    }
   ],
  
   "colour": 230,
@@ -69,7 +65,7 @@ var htmlBlocks =
   "message0": "Import font %1",
   "args0": [
     {
-      "type": "field_input",
+      "type": "field_multilinetext",
       "name": "text",
       "text": "default"
     },
@@ -263,7 +259,7 @@ var htmlBlocks =
   "message0": "text %1",
   "args0": [
   {
-    "type": "field_input",
+    "type": "field_multilinetext",
     "name": "content",
     "text": ""
   }
@@ -351,21 +347,17 @@ var htmlBlocks =
 },
 {
   "type": "genericstyle",
-  "message0": "[Custom CSS] Set Class To %1 : Set Value To  %2",
+  "message0": "[Custom CSS]  %1 ",
   "args0": [
   {
-    "type": "field_input",
+    "type": "field_multilinetext",
     "name": "property",
     "text": "property"
   },
-  {
-    "type": "field_input",
-    "name": "value",
-    "text": "value"
-  }
+ 
   ],
-  "previousStatement": "css",
-  "nextStatement": "css",
+  "previousStatement": null,
+  "nextStatement": null,
   "colour": 230,
   "tooltip": "",
   "helpUrl": ""
@@ -426,7 +418,7 @@ var htmlBlocks =
   "message0": "Inject%1",
   "args0": [
   {
-    "type": "field_input",
+    "type": "field_multilinetext",
     "name": "value",
     "text": "value"
   }
