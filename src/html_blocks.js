@@ -98,13 +98,17 @@ var htmlBlocks =
 },
  {
   "type": "classer",
-  "message0": "Set Class To  %1 with content%2",
+  "message0": "Set Class To  %1 with content%2%3",
   "args0": [
-     
     {
       "type": "field_input",
       "name": "text",
       "text": "default"
+    },
+    
+     
+    {
+      "type":"input_dummy",
     },
 
     {
@@ -138,7 +142,7 @@ var htmlBlocks =
 },
  {
   "type": "styler",
-  "message0": "Style Content %1 %2 %3",
+  "message0": "Style Content %1 %2",
   "args0": [
     {
       "type": "input_dummy"
@@ -148,9 +152,7 @@ var htmlBlocks =
       "name": "head",
       "check": ""
     },
-    {
-      "type": "input_dummy"
-    }
+
   ],
   "previousStatement": null,
   "nextStatement": null,
@@ -238,7 +240,7 @@ var htmlBlocks =
 },
 {
   "type": "paragraph",
-  "message0": "paragraph %1 %2 %3",
+  "message0": "paragraph %1 %2 ",
   "args0": [
     {
       "type":"input_dummy"
@@ -248,9 +250,7 @@ var htmlBlocks =
     "name": "content",
     "check": "html"
   },
-  {
-    "type":"input_dummy"
-  },
+ 
   ],
   "previousStatement": "html",
   "nextStatement": "html",
@@ -276,7 +276,7 @@ var htmlBlocks =
 },
 {
   "type": "division",
-  "message0": " Divider Class = %1 %2 %3 %4",
+  "message0": " Divider Class = %1 %2 %3 ",
   "args0": [
     {
       "type": "field_input",
@@ -290,9 +290,7 @@ var htmlBlocks =
       "type": "input_statement",
       "name": "NAME"
     },
-    {
-      "type": "input_dummy"
-    }
+   
   ],
   "previousStatement": null,
   "nextStatement": null,
@@ -424,6 +422,22 @@ var htmlBlocks =
   "helpUrl": ""
 },
 {
+  "type": "js",
+  "message0": "Inject%1",
+  "args0": [
+  {
+    "type": "field_input",
+    "name": "value",
+    "text": "value"
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": "body",
+  "colour": "#ffc000",
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
   "type": "genericattribute",
   "message0": "%1  =  %2",
   "args0": [
@@ -443,6 +457,25 @@ var htmlBlocks =
   "colour": 230,
   "tooltip": "",
   "helpUrl": ""
+},
+{
+  "type": "meta_org",
+  "message0": " Meta Tags%1 %2",
+  "args0": [
+  {
+    "type": "input_dummy"
+  },
+  {
+    "type": "input_statement",
+    "name": "content",
+    "check": ""
+  }
+  ],
+  "previousStatement": "header",
+  "nextStatement": null,
+  "colour": "#59B9F2",
+  "tooltip": "",
+  "helpUrl": "http://www.w3schools.com/tags/tag_html.asp"
 },
 {
   "type": "link",
@@ -530,15 +563,17 @@ var htmlBlocks =
 },
 {
   "type": "strong",
-  "message0": "important %1 %2",
+  "message0": "important %1%2",
   "args0": [
-  {
-    "type": "input_dummy"
-  },
+    {
+      "type":"input_dummy",
+    },
+ 
   {
     "type": "input_statement",
     "name": "content"
-  }
+  },
+  
   ],
   "previousStatement": null,
   "nextStatement": null,

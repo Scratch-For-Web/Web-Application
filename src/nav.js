@@ -13,7 +13,7 @@ document.getElementById('nav').innerHTML +=
       <button type="button" style="background: none;border:none; margin-top:-5px; " class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
         Files
       </button>
-      <ul class="bg-dark dropdown-menu">
+      <ul style="color:white" class="bg-dark dropdown-menu">
        <li style=" " class="nav-item">
         <span id="saveButton"> 
           Save Blocks</strong> </span>
@@ -45,7 +45,7 @@ document.getElementById('nav').innerHTML +=
        <a style="text-decoration:none; color:white" href="https://discord.gg/57HNMGDvXa"><img  width="27px" src="./assets/discord-icon.svg">Support</a>
       </li>
       <li>
-      <a style="text-decoration:none; color:white; ; top:20px" href="https://docs.scratch4web.ml/"><img  width="27px" src="./assets/docs-icon.svg">Docs</a>
+      <a style="text-decoration:none; color:white; ; top:20px" href="https://docs.scratch4web.ml/"><img  width="27px" src="./assets/docs-icon.png">Docs</a>
      </li>
      <li>
       <a style="text-decoration:none; color:white;  ; top:20px" href="https://github.com/Scratch-For-Web/Web-Application"><img  width="27px" src="./assets/github-icon.svg">Source Code</a>
@@ -63,9 +63,9 @@ document.getElementById('nav').innerHTML +=
 </div>
 </nav>
 <!-- The Modal -->
-<div style="border:none" class=" modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
+<div style="border:none" class=" modal bg-dark" id="myModal">
+  <div class="bg-dark modal-dialog">
+    <div class="bg-dark modal-content">
 
       <!-- Modal Header -->
       <div class="bg-dark modal-header">

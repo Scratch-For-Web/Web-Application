@@ -18,7 +18,7 @@ document.getElementById('header').innerHTML += `
 <meta property="twitter:title" content="Scratch For Web v1.3">
 <meta property="twitter:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
 <meta property="twitter:image" content="https://i.imgur.com/k9PYU79.png">
-     <link rel="shortcut icon" href="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" type="image/x-icon">
     
 
 
@@ -27,17 +27,25 @@ document.getElementById('header').innerHTML += `
     <meta name="description" >
     <style>
       .blocklyTreeLabel, .blocklyText, .blocklyHtmlInput {
-    font-family:'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;   
+       
 }
       .blocklyMenuItemContent  {
         color:black
       }
       html, body {
-        background-color: #303030;
-        color:white;
-        padding: 0;
-        margin: 0;
-        overflow:hidden;
+  
+      }
+      @media screen and (max-width: 992px) {
+        .blocklyToolboxCategory {
+          font-size: 30px;
+        }
+        .blocklyTreeRow{
+          font-size:40px;
+          
+        }
+        .blocklyTreeRowContentContainer{
+          font-size:4px
+        }
       }
       .blocklyTreeLabel {
   color: black;
@@ -45,16 +53,13 @@ document.getElementById('header').innerHTML += `
  
 /* Adds padding around the group of categories and separators. */
 .blocklyToolboxContents {
-  padding: .2em;
+  padding: .5em;
   color:white
 }
 .blocklyToolboxDiv{
   background-color: #212121;
 } 
-.blocklyWorkspace{
-  background-color: #212121;
-}
-
+ s
 .bg-dark{
   background-color: #212121;
 }
@@ -76,7 +81,7 @@ document.getElementById('header').innerHTML += `
 }
 .blocklyTreeLabel{
   color:white;
-  font-family: 'Montserrat', sans-serif;
+ 
 }
 .nav-link{
   color:white;
@@ -86,24 +91,12 @@ document.getElementById('header').innerHTML += `
 
       #container {
         width:100vw;
-        overflow:hidden;
         height:100vh;
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 50% 50%;
-        -ms-grid-rows: 50px 30px 45% 45%;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50px 30px auto 45%;
-        grid-template-areas:
-          "blockly     menubar"
-          "blockly     title"
-          "blockly     website"
-          "blockly     code";
-        font-family:'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace !important;   
+   
+          overflow:hidden;
       }
-
-      #blocklyArea  {grid-area: blockly; -ms-grid-row:1;-ms-grid-column:1; -ms-grid-row-span:4;}
-      #menubar      {  grid-area: menubar; font-family: sans-serif; font-size: 18px; padding: 5px 10px; display: -ms-grid; display: grid; grid-template-columns: auto 36% auto; -ms-grid-row:1;-ms-grid-column:2; -ms-grid-columns: 32% 36% 32%; }
+ 
+       
       
         font-family: 'Montserrat', sans-serif;}
        
@@ -112,12 +105,10 @@ document.getElementById('header').innerHTML += `
       /* Edge hack, God I hate this browser */
       _:-ms-lang(x),
       #container {
-        width:98vw;
+        width:100%;
+        overflow:hidden
       }
-      *{
-        font-family: 'Montserrat', sans-serif;
-        color:white
-      }
+       
       #saveButton{
         cursor: pointer;
       }
@@ -133,6 +124,9 @@ document.getElementById('header').innerHTML += `
       #run{
         cursor:pointer
       }
+      body html{
+        overflow:hidden
+      }
       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;1,200&family=Roboto+Condensed:wght@700&family=Signika+Negative:wght@400;700&family=Varela+Round&display=swap');
     </style>
     <script src="./blockly/blockly_compressed.js"></script>
@@ -143,12 +137,12 @@ document.getElementById('header').innerHTML += `
     <script src="./src/html_blocks.js"></script>
 
     <!-- For JS-Blocks only -->
-    <script src="./blockly/blocks_compressed.js"></script>
-    <script src="./blockly/javascript_compressed.js"></script>
+ 
     <script>
-  
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  
     </script>
-
 
 `

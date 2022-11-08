@@ -36,13 +36,13 @@ Msg = {
       "message0": "Site title %1%2%3",
     },
     "paragraph": {
-      "message0": "Paragraph %1%2%3",
+      "message0": "Paragraph %1%2",
     },
     "plaintext": {
       "message0": "Text %1",
     },
     "division": {
-      "message0": "Divider Class =  %1 %2%3%4",
+      "message0": "Divider Class =  %1 %2%3",
     },
     "style": {
       "message0": "Inline Style Content  %1 %2",
@@ -118,7 +118,7 @@ Msg = {
       "helpUrl": "http://www.w3schools.com/tags/tag_html.asp"
     },
     "strong": {
-      "message0": "Set %1 To Bold %2",
+      "message0": "Bold%1%2",
       "tooltip": "",
       "helpUrl": "http://www.w3schools.com/tags/tag_html.asp"
     },

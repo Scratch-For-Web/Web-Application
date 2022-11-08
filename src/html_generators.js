@@ -25,6 +25,30 @@ HtmlGenerator['divclass'] = function(block) {
   var code = `class="${text_text}"`;
   return code;
 };
+HtmlGenerator['meta_org'] = function(block) {
+  var text_text = block.getFieldValue('text');
+  var content = HtmlGenerator.statementToCode(block, 'content'); 
+  var code = `
+  
+  <meta charset="utf-8">
+   ${content}\n
+  </meta>
+
+  `;
+  return code;
+};
+HtmlGenerator['js'] = function(block) {
+  var text_text = block.getFieldValue('value');
+  var code = `
+  
+  <script>
+   ${text_text}
+  </script>
+
+  `;
+  return code;
+};
+
 HtmlGenerator['importfont'] = function(block) {
   var text_text = block.getFieldValue('text');
   // TODO: Assemble JavaScript into code variable.
@@ -47,7 +71,7 @@ HtmlGenerator['baseframe'] = function(block) {
     +`<head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MalikWhitten67/bungie-css/src/css/main.css>">
     </head>`
-    + `</head>\n\n<body class="bg-container">\n`
+    + `</head>\n\n<body>\n`
     + statements_body
     + "</body>\n</html>\n";
 
@@ -114,7 +138,7 @@ HtmlGenerator['body'] = function(block) {
 
 HtmlGenerator['head'] = function(block) {
   var statements_content = HtmlGenerator.statementToCode(block, 'content');
-  var code = '<head>\n   \n <meta charset="utf-8">\n' + statements_content + '</head>\n';
+  var code = '<head>\n   \n <meta charset="utf-8"></meta>\n' + statements_content + '</head>\n';
   return code;
 };
 
@@ -391,7 +415,7 @@ HtmlGenerator['onclick'] = function(block) {
 HtmlGenerator['body_attributes'] = function(block) {
   var value_name = HtmlGenerator.valueToCode(block, 'NAME', HtmlGenerator.ORDER_ATOMIC);
   var statements_content = HtmlGenerator.statementToCode(block, 'content');
-  var code = `<body class="bg-container"` + value_name + '>\n' + statements_content + '</body>\n';
+  var code = `<body` + value_name + '>\n' + statements_content + '</body>\n';
   return code;
 };
 
