@@ -1,6 +1,6 @@
 document.getElementById('nav').innerHTML +=
 `
-<nav style="background-color:#212121;" class="navbar navbar-expand-sm  text-white navbar-light">
+<nav style="width:100%;background-color:#212121;" class="nav-fixed navbar navbar-expand-sm  text-white navbar-light">
 <div class="container-fluid">
   <ul style="color:white" class="navbar-nav">
     <li>

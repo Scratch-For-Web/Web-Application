@@ -124,7 +124,7 @@ document.getElementById('header').innerHTML += `
       #run{
         cursor:pointer
       }
-      body html{
+      *{
         overflow:hidden
       }
       @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,400;1,200&family=Roboto+Condensed:wght@700&family=Signika+Negative:wght@400;700&family=Varela+Round&display=swap');
