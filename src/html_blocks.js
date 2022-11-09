@@ -261,7 +261,6 @@ var htmlBlocks =
   {
     "type": "field_multilinetext",
     "name": "content",
-    "text": ""
   }
   ],
   "previousStatement": null,
@@ -269,6 +268,85 @@ var htmlBlocks =
   "colour": 330,
   "tooltip": "",
   "helpUrl": "http://www.w3schools.com/tags/tag_html.asp"
+},
+{
+  "type": "plaintext",
+  "message0": "text %1",
+  "args0": [
+  {
+    "type": "field_multilinetext",
+    "name": "content",
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 330,
+  "tooltip": "",
+  "helpUrl": "http://www.w3schools.com/tags/tag_html.asp"
+},
+{
+  "type": "meta_title",
+  "message0": "Set Meta Tag Tittle To%1",
+  "args0": [
+  {
+    "type": "field_multilinetext",
+    "name": "content",
+    "text":"Set website title",
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#59B9F2",
+  "tooltip": "",
+  "helpUrl": "https://www.w3schools.com/tags/tag_meta.asp"
+},
+{
+  "type": "meta_desc",
+  "message0": "Set Meta Tag Description To%1",
+  "args0": [
+  {
+    "type": "field_multilinetext",
+    "name": "content",
+    "text":"Set website description",
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#59B9F2",
+  "tooltip": "",
+  "helpUrl": "https://www.w3schools.com/tags/tag_meta.asp"
+},
+{
+  "type": "meta_img",
+  "message0": "Set Meta Image To%1",
+  "args0": [
+  {
+    "type": "field_multilinetext",
+    "name": "content",
+    "text":"Path or Image",
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#59B9F2",
+  "tooltip": "",
+  "helpUrl": "https://www.w3schools.com/tags/tag_meta.asp"
+},
+{
+  "type": "meta_url",
+  "message0": "Set Meta Url To%1",
+  "args0": [
+  {
+    "type": "field_multilinetext",
+    "name": "content",
+    "text":"Link Url",
+  }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": "#59B9F2",
+  "tooltip": "",
+  "helpUrl": "https://www.w3schools.com/tags/tag_meta.asp"
 },
 {
   "type": "division",
@@ -459,7 +537,7 @@ var htmlBlocks =
   },
   {
     "type": "input_statement",
-    "name": "content",
+    "name": "meta",
     "check": ""
   }
   ],
