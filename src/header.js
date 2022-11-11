@@ -16,7 +16,7 @@ document.getElementById('header').innerHTML += `
 <meta property="twitter:title" content="Scratch For Web v1.3">
 <meta property="twitter:description" content="Scratch For Web - Create Dynamic Responsive Webpages fast using blocks!">
 <meta property="twitter:image" content="https://i.imgur.com/k9PYU79.png">
-<link rel="prefetch" href="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" type="image/x-icon">
+<link href="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" type="image/x-icon">
 <meta content="">
 <meta charset="utf-8">
 <meta name="description">
