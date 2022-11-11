@@ -1,11 +1,15 @@
 document.getElementById('nav').innerHTML +=
 `
+<link rel="prefetch" href="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" >
+<link rel="prefetch" href="./assets/discord-icon.svg" >
+<link rel="prefetch" href="./assets/docs-icon.png" >
+<link rel="prefetch" href="./assets/github-icon.svg" >
 <nav style="background-color:#212121;" class="navbar navbar-expand-sm  text-white navbar-light">
   <div class="container-fluid">
     <ul style="color:white" class="navbar-nav">
       <li></li>
       <li class="nav-item">
-        <img src="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" width="20px"> Scratch For Web v1.3
+        <img loading="lazy" src="https://scratch-for-web.vercel.app/img/scratch_for_web.679332ca.png" width="20px"> Scratch For Web v1.3
       </li>
       <div class="dropdown">
         <button type="button" style="background: none;border:none; margin-top:-5px; " class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"> Files </button>
@@ -38,15 +42,15 @@ document.getElementById('nav').innerHTML +=
         <ul class="bg-dark dropdown-menu">
           <li>
             <a style="text-decoration:none; color:white" href="https://discord.gg/57HNMGDvXa">
-              <img width="27px" src="./assets/discord-icon.svg">Support </a>
+              <img width="27px" loading="lazy" src="./assets/discord-icon.svg">Support </a>
           </li>
           <li>
             <a style="text-decoration:none; color:white; ; top:20px" href="https://docs.scratch4web.ml/">
-              <img width="27px" src="./assets/docs-icon.png">Docs </a>
+              <img width="27px" loading="lazy"  src="./assets/docs-icon.png">Docs </a>
           </li>
           <li>
             <a style="text-decoration:none; color:white;  ; top:20px" href="https://github.com/Scratch-For-Web/Web-Application">
-              <img width="27px" src="./assets/github-icon.svg">Source Code </a>
+              <img width="27px" loading="lazy" src="./assets/github-icon.svg">Source Code </a>
           </li>
         </ul>
       </div>
