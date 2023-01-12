@@ -1,7 +1,4 @@
-document.getElementById('body').innerHTML +=
-`
-
-<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
+export default `<xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
       <block type="html">
         <statement name="content">
           <block type="head">
@@ -38,10 +35,10 @@ document.getElementById('body').innerHTML +=
                       <block type="paragraph" >
                         <statement name="content">
                           <block type="plaintext" >
-                            <field name="content">Just combine the building blocks on the left side</field>
+                            <field name="content">Just combine the building blocks from the left side</field>
                             <next>
                               <block type="plaintext" >
-                                <field name="content">and watch this page change accordingly.</field>
+                                <field name="content">and watch your page change accordingly.</field>
                               </block>
                             </next>
                           </block>
@@ -50,10 +47,10 @@ document.getElementById('body').innerHTML +=
                           <block type="paragraph" >
                             <statement name="content">
                               <block type="plaintext">
-                                <field name="content">On the bottom, you can also see the HTML</field>
+                                <field name="content">On the top, you can also see the HTML</field>
                                 <next>
                                   <block type="plaintext" >
-                                    <field name="content">source code of the page you are creating.</field>
+                                    <field name="content">source code of the page you are creating by pressing View Code.</field>
                                   </block>
                                 </next>
                               </block>
@@ -69,7 +66,4 @@ document.getElementById('body').innerHTML +=
           </block>
         </statement>
       </block>
-    </xml>
-
-
-`
+    </xml>`

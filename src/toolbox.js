@@ -1,6 +1,5 @@
-document.getElementById('body').innerHTML += `
-
-<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+export default (favorites) => {
+    return `<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
       <category name="Html Blocks" expanded="true">
         <category name="Base Blocks" colour="#a55b5b">
           <label text="Base Blocks To Get Started"></label>
@@ -34,11 +33,11 @@ document.getElementById('body').innerHTML += `
               </block>
             </statement>
           </block>
-          <block type="span" />
+          <block type="span">
           <block type="generictag">
             <field name="NAME">Custom Tag</field>
           </block>
-        </category>
+        </block></category>
         <category name="Text Formatting" colour="#5ba55b">
           <label text="Format Text"></label>
           <block type="plaintext">
@@ -180,9 +179,5 @@ document.getElementById('body').innerHTML += `
           <block type="react_js"></block>
         </category>
       </category>
-    </xml>
-
-
-
-
-`
+    </xml>`
+}
