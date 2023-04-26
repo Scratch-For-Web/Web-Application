@@ -42,12 +42,4 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        funni: resolve(__dirname, 'index.html'),
-      },
-    },
-  },
 });
