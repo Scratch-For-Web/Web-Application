@@ -19,11 +19,11 @@ Blockly.JavaScript['meta_org'] = function(block) {
   return code;
 };
 Blockly.JavaScript['js'] = function(block) {
-  var text_text = block.getFieldValue('value');
+  var content =  Blockly.JavaScript.statementToCode(block, 'blocks');
   var code = `
   
   <script>
-   ${text_text}
+   ${content}
   </script>
 
   `;
