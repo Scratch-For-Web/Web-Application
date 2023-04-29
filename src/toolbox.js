@@ -173,6 +173,7 @@ export default (favorites) => {
       <sep></sep>
       <category name="Javascript" colour="#f1c232">
         <block type="js"></block>
+        <block type="controls_if"></block>
       </category>
       <category name="Frameworks">
         <category name="React Js" colour="	#EE4B2B">
