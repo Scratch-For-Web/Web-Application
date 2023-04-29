@@ -492,19 +492,18 @@ var htmlBlocks =
 },
 {
   "type": "js",
-  "message0": "Inject%1",
+  "message0": "script%1",
   "args0": [
-  {
-    "type": "field_multilinetext",
-    "name": "value",
-    "text": "value"
-  }
+   {
+      "type": "input_statement",
+      "name": "blocks"
+    }
   ],
   "previousStatement": null,
   "nextStatement": "body",
   "colour": "#ffc000",
-  "tooltip": "",
-  "helpUrl": ""
+  "tooltip": "javascript script block",
+  "helpUrl": "https://www.w3schools.com/js/DEFAULT.asp"
 },
 {
   "type": "genericattribute",
