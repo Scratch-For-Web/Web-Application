@@ -6,7 +6,6 @@ function dash() {
    
     if(!localStorage.getItem('pocketbase_auth')){
         window.location.hash = '#/login',
-        return,
     }
     let currentUser = JSON.parse(localStorage.getItem('pocketbase_auth')).model
     const handleCreateProject = (e) => {
