@@ -1,5 +1,5 @@
 
-function Dash() {
+function dash() {
     const [showModal, setShowModal] = useState(false);
     const [projectName, setProjectName] = useState('');
     const [projects, setProjects] = useState([]);
