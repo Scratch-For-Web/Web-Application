@@ -43,7 +43,7 @@
             <button type="submit" className="w-full inline-flex items-center justify-center rounded-md border border-transparent shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               Login
             </button>
-            <a href="#/signup" className="w-full ml-4 inline-flex items-center justify-center rounded-md border border-transparent shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <a href="#/register" className="w-full ml-4 inline-flex items-center justify-center rounded-md border border-transparent shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               Signup
             </a>
           </div>
