@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-env="production">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/visi.js/visi.min.js" type="module"></script>
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone"></script>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/@blockly/plugin-workspace-search "></script>
+    <script src="https://unpkg.com/browse/blockly@9.3.3/blockly_compressed.js.map"></script>
+    <script src="https://unpkg.com/browse/@blockly/dev-tools@5.0.2/src/index.js"></script>
+    <script src="https://unpkg.com/browse/blockly@9.3.3/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/@blockly/workspace-backpack@3.0.2/dist/index.js"></script>
+    <script src="https://unpkg.com/@blockly/theme-dark@4.0.1/dist/index.js"></script>
+    <script src="https://unpkg.com/browse/blockly@9.3.3/blocks_compressed.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .blocklyFlyoutScrollbar[display="none"] {
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            overflow: hidden;
+            outline: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1050;
+        }
+
+        .modal-dialog {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            max-height: 100%;
+            margin: 0;
+        }
+
+        .modal-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            pointer-events: auto;
+
+            border-radius: 0.3rem;
+            outline: none;
+        }
+
+        .modal-header {
+            display: flex;
+            flex-shrink: 0;
+
+            justify-content: space-between;
+
+
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+        }
+
+        .modal-body {
+            position: relative;
+            flex: 1 1 auto;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .modal-footer {
+            display: flex;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0.75rem;
+            border-top: 1px solid #dee2e6;
+            border-bottom-right-radius: 0.3rem;
+            border-bottom-left-radius: 0.3rem;
+        }
+
+        .blocklyTreeRow {
+            background: none;
+        }
+
+        .blocklyTreeRow::before {
+            content: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <noscript>
+        <strong>We're sorry but s4w doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+
+
+
+    <script type="text/babel" src="./main.js" data-type="module"></script>
+
+</body>
+
+</html>
