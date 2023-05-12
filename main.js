@@ -15,14 +15,14 @@ api.autoCancellation(false)
 app.bindRoot("root")
 
 app.root("/dash", (req, res) =>{
-    dispose('./modules/views/Dash.jsx', async ( Dash ) => {
+    dispose('./modules/views/dash.jsx', async ( Dash ) => {
         res.jsx(<Dash/>)
     })
  res.return()
 })
 
 app.on("/dash", (req, res) =>{
-    dispose('./modules/views/Dash.jsx', async ( Dash ) => {
+    dispose('./modules/views/dash.jsx', async ( Dash ) => {
         res.jsx(<Dash/>)
     })
  res.return()
