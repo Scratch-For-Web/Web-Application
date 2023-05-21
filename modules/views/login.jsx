@@ -1,4 +1,4 @@
-function Login() {
+function login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
