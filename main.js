@@ -7,7 +7,14 @@ import{ toolbox } from "./modules/blockly/main/toolbox.js"
 import "./modules/blockly/main/imports.js"
 import pocketbase from "https://unpkg.com/pocketbase"
 const api = new pocketbase("https://shaggy-denmark.pockethost.io")
-lib('@tailwind/core')
+if(api.authStore.isValid){
+    console.log("User is logged in")
+}else{
+    api.authStore.clear()
+    console.log("User is not logged in")
+    window.location.hash = "#/login"
+}
+lib('@tailwind/daisyui')
 window.toolbox = toolbox // global variable for toolbox
 window.api = api
 api.autoCancellation(false)
@@ -45,10 +52,13 @@ app.on("/editor/:project_id/:owner_id", (req, res) =>{
  
     res.return()
 })
+app.on('/updateUser/:username/:data', (req, res) => {
+    console.log(req.params)
+})
 app.on('/login', (req, res) => {
     res.title("Login")
     res.return()
-    dispose('./modules/views/login.jsx', async ( Login ) => {
+    dispose('./modules/views/Login.jsx', async ( Login ) => {
         res.jsx(<Login/>)
     })
     res.return()
@@ -77,12 +87,14 @@ app.on('/settings', (req, res) => {
     })
     res.return()
 })
-app.on('/createproject/:project_name/:owner_id', (req, res) => {
+app.on('/createproject/:project_name/:project_desc/:owner_id', (req, res) => {
     let project_name = req.params.project_name
+    let project_desc = req.params.project_desc
     let owner_id = req.params.owner_id
     let data = {
         "name": project_name,
         "owner": owner_id,
+        "desc": project_desc,
         "workspace": ""
     }
     api.collection("projects").create(data).then((project) => {

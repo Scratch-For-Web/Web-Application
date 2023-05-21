@@ -1,14 +1,24 @@
 function Settings() {
     const [username, setUsername] = useState('');
+    const [newusername, setNewUsername] = useState('');
     const [password, setPassword] = useState('');
     const [avatar, setAvatar] = useState('');
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      if (avatar.files.type !== 'image/png') {
-        alert('Only png files are allowed');
-        return;
-      }
+       
+      let form = new FormData();
+       if(newusername != '') {
+        form.append('username', newusername);
+       }
+      form.append('avatar', avatar);
+      api.collection('users').authWithPassword(username, password).then((user) => {
+        api.collection('users').update(user.record.id, form).then(() => {
+          alert('Saved!');
+          api.collection('users').authRefresh();
+          window.location.hash = '#/dash';
+        });
+      });
     };
   
     return (
@@ -29,14 +39,28 @@ function Settings() {
             />
           </div>
           <div className="mb-4">
+            <label htmlFor="newusername" className="block font-medium mb-2">
+              Username
+            </label>
+            <input
+              type="text"
+              id="newusername"
+              name="username"
+              placeholder="New Username"
+              value={username}
+              onChange={(e) =>  setNewUsername(e.target.value)}
+              className="border-gray-400 border-2 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div className="mb-4">
             <label htmlFor="password" className="block font-medium mb-2">
               Password
             </label>
             <input
-              disabled
+            
               type="password"
               id="password"
-              accept="image/*"
+              
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -51,8 +75,8 @@ function Settings() {
               type="file"
               id="avatar"
               name="avatar"
-              value={avatar}
-              onChange={(e) => setAvatar(e.target.value)}
+              
+              onChange={(e) =>   setAvatar(e.target.files[0])}
               className="border-gray-400 border-2 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
             />
           </div>
