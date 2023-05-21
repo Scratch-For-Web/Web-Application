@@ -58,7 +58,7 @@ app.on('/updateUser/:username/:data', (req, res) => {
 app.on('/login', (req, res) => {
     res.title("Login")
     res.return()
-    dispose('./modules/views/Login.jsx', async ( Login ) => {
+    dispose('./modules/views/login.jsx', async ( Login ) => {
         res.jsx(<Login/>)
     })
     res.return()
