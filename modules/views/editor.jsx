@@ -6,7 +6,7 @@ function editor(props) {
     let workspaceCode  = props.workspaceCode;
      
     if(!localStorage.getItem('pocketbase_auth')){
-        window.location.hash  = '#/login';
+        window.location.href = '#/login';
     }
     useEffect(() => {
         const blocklyDiv = document.getElementById('blocklyDiv');
