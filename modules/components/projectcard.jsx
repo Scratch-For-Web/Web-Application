@@ -12,7 +12,6 @@ const projectcard = (props) => {
 
   }
   let date = new  Date(props.created).toLocaleDateString()
-  console.log(date)
   return (
     <div id={props.id} className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">
