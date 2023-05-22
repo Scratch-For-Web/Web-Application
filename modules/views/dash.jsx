@@ -56,7 +56,7 @@ function dash() {
 
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-5 mt-8 mx-auto'>
           {
             projects.length > 0 ?   projects.map((project) => {
                 return project;
