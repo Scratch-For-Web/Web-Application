@@ -1,2 +1,1 @@
-let jsx_base = ``
-
+// add visi.js blocks and add multiple pages
