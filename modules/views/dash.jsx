@@ -44,7 +44,10 @@ function dash() {
     setProjectDesc('');
     var user = JSON.parse(localStorage.getItem('pocketbase_auth')).model;
     var url = `#/createproject/${projectName}/${projectDesc}/${user.id}`;
-    if(!window.location.hash == url)     window.location.hash = url;
+    if(window.location.hash !== url){
+     window.location.hash = url
+    }
+    console.log(window.location.hash)
   };
 
   return (
