@@ -7,6 +7,7 @@ import{ toolbox } from "./modules/blockly/main/toolbox.js"
 import "./modules/blockly/main/imports.js"
 import pocketbase from "https://unpkg.com/pocketbase"
 const api = new pocketbase("https://shaggy-denmark.pockethost.io")
+updateCacheVersion(1) 
 if(api.authStore.isValid){
     console.log("User is logged in")
 }else{
