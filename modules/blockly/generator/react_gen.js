@@ -1,2 +1,0 @@
-let jsx_base = ``
-
