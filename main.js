@@ -8,6 +8,7 @@ import pocketbase from "https://unpkg.com/pocketbase"
 import { ReactRouter } from "./modules/assets/visi.min.js"
 const app = new ReactRouter()
 const api = new pocketbase("https://shaggy-denmark.pockethost.io")
+ 
 if(api.authStore.isValid){
     console.log("User is logged in")
 }else{
@@ -20,7 +21,7 @@ window.toolbox = toolbox // global variable for toolbox
 window.api = api
 window.app = app
 api.autoCancellation(false)
-
+updateCacheVersion('v1.0.0') // update cfr cache to use next version!
 app.bindRoot("root")
 app.use('/dash')
 app.use('/editor')
