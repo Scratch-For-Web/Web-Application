@@ -10,12 +10,10 @@ Website: https://scratch4web.vercel.app/
 
 Discord: https://discord.gg/57HNMGDvXa
 
-## TODO
- * Support more HTML tags and attributes
- * Enforce HTML tag-nesting rules via types
- * Many more …
-
-## Further ideas
- * Maybe support generating other markup languages (Markdown, LaTeX)
- * Add script-tag and allow for standard Blockly blocks in there
+# Contributions
+ * Please follow current code syntax.
+ * Be sure to make pull requests and comment whats changed
+ * Supply both unminified and minified versions  - minfied if approved will be used in production! 
+  - minify tool that we use: https://minify-js.com/ 
+ 
 
