@@ -31,23 +31,22 @@ function dash() {
     });
   }, []);
 
-  const handleCreateProject = (e) => {
-    e.preventDefault();
+   function handleCreateProject(e) {
+    
     // TODO: handle project creation
     if (projectName.length < 1) {
       alert('Please enter a project name');
       return;
     }
     setShowModal(false);
-
-    setProjectName('');
-    setProjectDesc('');
+ 
     var user = JSON.parse(localStorage.getItem('pocketbase_auth')).model;
-    var url = `#/createproject/${projectName}/${projectDesc}/${user.id}`;
-    if(window.location.hash !== url){
-     window.location.hash = url
-    }
-    console.log(window.location.hash)
+   app.post('/projects', (res) => {
+    res.set('Content-Type', 'application/json');
+    res.json({ name: projectName, desc: projectDesc, owner: user.id});
+   })
+   let url = `#/editor/${projectName} /${user.id}`;
+    if(!window.location.hash == url)     window.location.hash = url;
   };
 
   return (
@@ -59,7 +58,7 @@ function dash() {
 
         </div>
 
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-5 mt-8 mx-auto'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8'>
           {
             projects.length > 0 ?   projects.map((project) => {
                 return project;
@@ -85,7 +84,7 @@ function dash() {
       <div className="modal">
         <div className="modal-box relative">
           <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-          <form onSubmit={handleCreateProject}>
+        
             <div className="mb-4">
               <label htmlFor="projectName" className="block font-medium mb-2">Project Name</label>
 
@@ -116,9 +115,11 @@ function dash() {
               />
             </div>
             <div className="flex justify-end">
-              <button type="submit" className="bg-blue-500 text-white px-4 py-2 w-full rounded-md hover:bg-blue-600">Create</button>
+              <button type="submit" className="bg-blue-500 text-white px-4 py-2 w-full rounded-md hover:bg-blue-600"
+              onClick={handleCreateProject }
+              >Create</button>
             </div>
-          </form>
+          
         </div>
         
       </div>

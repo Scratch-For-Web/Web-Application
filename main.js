@@ -1,13 +1,13 @@
-const app = new ReactRouter()
- 
+
 /**
  * @imports -> toolbox, main imports, tailwindcss
  */
 import{ toolbox } from "./modules/blockly/main/toolbox.js"
 import "./modules/blockly/main/imports.js"
 import pocketbase from "https://unpkg.com/pocketbase"
+import { ReactRouter } from "./modules/assets/visi.min.js"
+const app = new ReactRouter()
 const api = new pocketbase("https://shaggy-denmark.pockethost.io")
-updateCacheVersion(1) 
 if(api.authStore.isValid){
     console.log("User is logged in")
 }else{
@@ -15,13 +15,16 @@ if(api.authStore.isValid){
     console.log("User is not logged in")
     window.location.hash = "#/login"
 }
-lib('@tailwind/daisyui')
+lib('@tailwind/daisyui@3.0.22')
 window.toolbox = toolbox // global variable for toolbox
 window.api = api
+window.app = app
 api.autoCancellation(false)
 
 app.bindRoot("root")
-
+app.use('/dash')
+app.use('/editor')
+app.use('/login')
 app.root("/dash", (req, res) =>{
     dispose('./modules/views/dash.jsx', async ( Dash ) => {
         res.jsx(<Dash/>)
@@ -53,16 +56,59 @@ app.on("/editor/:project_id/:owner_id", (req, res) =>{
  
     res.return()
 })
-app.on('/updateUser/:username/:data', (req, res) => {
-    console.log(req.params)
-})
+ 
 app.on('/login', (req, res) => {
     res.title("Login")
     res.return()
-    dispose('./modules/views/login.jsx', async ( Login ) => {
+    dispose('./modules/views/Login.jsx', async ( Login ) => {
+        console.log(Login)
         res.jsx(<Login/>)
     })
     res.return()
+})
+app.get('/login', (req, res) => {
+    res.title("Login")
+    res.return()
+    dispose('./modules/views/Login.jsx', async ( Login ) => {
+        console.log(Login)
+        res.jsx(<Login/>)
+    })
+    res.return()
+    app.listen('/login', (data) => {
+        let msg  = JSON.parse(data.data)
+
+        api.collection("users").authWithPassword(msg.username, msg.password).then((user) => {
+            
+            res.return()
+            res.redirect("/dash")
+            res.return()
+            app.stopListening('/login')
+          
+        }).catch((err) => {
+             let data  = err.data.data
+            if(data.password){
+                
+                app.post('/login_response', (res) => {
+                    res.set('Content-Type', 'application/json')
+                    res.json({error: data.password, type: "password"})
+                     
+                })
+            }else if(data.username){
+                app.post('/login_response', (res) => {
+                    res.set('Content-Type', 'application/json')
+                    res.json({error: err.data.username, type: "username"})
+                    
+                })
+            }else{
+                app.post('/login_response', (res) => {
+                    res.set('Content-Type', 'application/json')
+                    res.json({error: "Unknown error"})
+                    
+                })
+            }
+             
+        })
+    })
 })
 app.on('/register', (req, res) => {
     res.title("Register")
@@ -73,13 +119,6 @@ app.on('/register', (req, res) => {
     res.return()
 })
 
-app.on('/gateway/:username/:password', (req, res) => {
-    let password = req.params.password
-    let username = req.params.username
-    api.collection("users").authWithPassword(username, password).then((user) => {
-        res.redirect("/dash")
-    })
-})
 app.on('/settings', (req, res) => {
     res.title("Settings")
     res.return()
@@ -87,6 +126,27 @@ app.on('/settings', (req, res) => {
         res.jsx(<Settings/>)
     })
     res.return()
+})
+app.listen('/projects', (data) => {
+    let msg  = JSON.parse(data.data)
+    console.log(msg)
+    let project_name = msg.name
+    let project_desc = msg.desc
+    let owner_id = msg.owner
+    let ddata = {
+        "name": project_name,
+        "owner": owner_id,
+        "desc": project_desc,
+        "workspace": ""
+    }
+    api.collection("projects").create(ddata).then((project) => {
+       window.location.href = `#/editor/${project.id}/${project.owner}`
+    }
+    ).catch((err) => {
+            console.log(err.data)
+            alert('Error creating project, name already exists')
+        }
+    )
 })
 app.on('/createproject/:project_name/:project_desc/:owner_id', (req, res) => {
     let project_name = req.params.project_name
