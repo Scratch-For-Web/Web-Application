@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta config routes="/,/login,/signup" fallback="/">
+     
+</head>
+<body>
+    <imports>
+        ./pages/dash.html,
+        ./pages/login.html,
+        ./pages/signup.html,
+        ./assets/tailwind.js,
+        ./assets/daisyui.css,
+        ./assets/js/app.js
+    </imports>
+    <render route="/" position="first" title="home">
+        <dash></dash>
+    </render>
+    <render route="/login" position="last"
+    title="login"
+    >
+        <login></login>
+    </render>
+    <render route="/signup" position="last">
+        <signup></signup>
+    </render>
+    <script src="./assets/html-dox.js"  ></script>
+</body>
+</html>

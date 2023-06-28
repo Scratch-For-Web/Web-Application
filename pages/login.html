@@ -1,0 +1,74 @@
+<var name="error">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+    </svg>
+
+</var>
+<var name="logo">
+    <img src="https://avatars.githubusercontent.com/u/117445997?s=48&v=4" width="38" height="38" alt="">
+</var>
+<login>
+
+    <div class="hero min-h-screen bg-base-200">
+
+        <div class="hero-content flex-col xl:max-w-screen xl:max-h-screen w-full">
+ 
+            <div
+                class="card flex-shrink-0 w-full max-w-sm xl:max-w-lg  lg:max-w-lg  lg:max-h-lg lg:max-h-lg shadow-2xl bg-base-100">
+                <div class="card-body">
+                    <label class="label">
+                        <span class="label-text  text-slate-500 text-2xl  font-medium inline-flex items-center">
+                            {{logo}}
+                            <span class="ml-2">Scratch 4 Web</span>
+                    </label>
+                    <label class="label">
+                        <span class="label-text  text-slate-600 font-bold text-[1.5rem]">
+                            Login
+                    </label>
+                    <label class="label">
+                        <span class="label-text  text-slate-500   hidden" id="error">
+                            {{error}}
+                        </span>
+                    </label>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text" id="emaillb">Email</span>
+                        </label>
+                        <input type="text" name="email" placeholder="email" class="input input-bordered"
+                            onchange="setState('email',this.value)" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text" id="passwordlb">Password</span>
+                        </label>
+
+                        <input type="password" name="password" placeholder="password" class="input input-bordered"
+                            onchange="setState('password',this.value)" />
+                        <label class="label">
+                            <a href="#/forgot" class="label-text link link-hover">Forgot password?</a>
+                        </label>
+                        <label class="label">
+                            <a href="#/signup" class="label-text  link link-hover">Not a member? Sign up now</a>
+                        </label>
+
+                    </div>
+                    <div class="form-control mt-6">
+                        <button class="btn bg-[#6327ff] text-white hover:bg-[#6327ff] "  id="login">Login</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <h3>
+                ©2023 Scratch 4 Web. All rights reserved.
+            </h3>
+        </div>
+    </div>
+</login>
+
+<export>
+    login
+</export>
+ 
