@@ -1,0 +1,119 @@
+<import src="./static/components/card.html"></import>
+<main>
+ <style>
+   main{
+      padding:15px;
+      
+   }
+   button{
+     padding:10px;
+     margin:10px;
+     border-radius:5px;
+     border:1px solid #ccc;
+     background:#fff;
+     cursor:pointer;
+   }
+   form{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+     padding:10px;
+     margin:10px;
+     border-radius:5px;
+     border:1px solid #ccc;
+     background:#fff;
+     cursor:pointer;
+   }
+   input[type="submit"]{
+     padding:10px;
+     margin:10px;
+     border-radius:5px;
+     border:1px solid #ccc;
+     background:#fff;
+     cursor:pointer;
+   }
+   input[type="text"]{
+     padding:10px;
+     margin:10px;
+     border-radius:5px;
+     border:1px solid #ccc;
+     background:#fff;
+     cursor:pointer;
+   }
+ 
+ </style>
+ <script key="count">
+  let num1 = 100;
+  let num2 = 100;
+
+  
+ </script>
+ <script key="sum" props>
+  let sum = count.num1 + count.num2;
+ </script>
+ <script src="/public/scripts/caller/controller.js"
+  id="controller"
+ ></script>
+ <script data-type="local">
+  function listener(){
+    let router = new Router();
+     
+  }
+  listener();
+  function add(num1, num2){
+    return num1 + num2;
+  }
+  console.log( dox.querySelectorAll('button') )
+  
+ </script>
+
+ <h1> 
+  ${{
+   if(sum.sum > 100){
+     return `Sum is greater than 100`
+    }else{
+      return ` Sum is less than 100`
+    }
+ }}
+</h1>
+  <card color="#ccc" ></card>
+ 
+  <form action="/"    method="post"
+   
+  submit-id="fsubmit1"
+  >
+    <label>
+      Name
+    </label>
+    <input type="text" name="name" placeholder="Enter your name"
+    accept="text"
+    pattern="[a-zA-Z]+"
+    >
+    <label>
+      Age
+    </label>
+    <input type="text" name="age" placeholder="Enter your age"
+    pattern="[0-9]+"
+    accept="number"
+
+    >
+    <button type="submit" id="fsubmit1">Submit</button>
+  </form>
+  <dox-shadow>
+    <div>
+      {{state.sum}}
+    </div>
+  </dox-shadow>
+  <markdown src="./pages/markdown.md"></markdown>
+  
+  
+ 
+  <button onclick="defer(event, 'controller', ()=>{
+     effect('sum', (v)=>{
+      
+       callback(v)
+     })
+  })">
+    Deferred function
+  </button>
+</main>
