@@ -36,6 +36,7 @@ const Nav = (props) => {
         a.href = URL.createObjectURL(blob);
         a.download = props.project_name + ".html"
         a.click();
+        cosole.log(saving)
     }
 
 
